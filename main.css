@@ -6,3 +6,7 @@
 body {
     font-family: "Fraunces", sans-serif;
 }
+
+.message.big {
+    font-size: 10rem;
+}
