@@ -8,7 +8,7 @@ console.log(myMessage.innerText);
 //changing element properties
 
 myMessage.style.color = "#6c0";
-myMessage.classList.add("big");
+//myMessage.classList.add("big");
 
 //creating new elements and adding them to the page
 
