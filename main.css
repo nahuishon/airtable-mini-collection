@@ -14,6 +14,7 @@ body {
 .container {
     background-color: lightblue;
     min-height: 100vh;
+    padding: 2rem;
 }
 .new-message {
     text-align: center;
@@ -21,4 +22,13 @@ body {
 
 .new-image {
     transform:rotate(10deg);
+}
+
+.click-me{
+    font-size:2rem;
+    width: 200px;
+    padding: 1rem;
+    border: 1px solid black;
+    background: white;
+    text-align: center;
 }
