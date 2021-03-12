@@ -10,3 +10,15 @@ body {
 .message.big {
     font-size: 10rem;
 }
+
+.container {
+    background-color: lightblue;
+    min-height: 100vh;
+}
+.new-message {
+    text-align: center;
+}
+
+.new-image {
+    transform:rotate(10deg);
+}

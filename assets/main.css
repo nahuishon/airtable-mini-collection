@@ -1,8 +1,0 @@
-@font-face {
-    font-family: "Fraunces";
-    src: url("./assets/Fraunces.woff2") format("woff2");
-}
-
-body {
-    font-family: "Fraunces", sans-serif;
-}

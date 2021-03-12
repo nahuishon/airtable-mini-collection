@@ -18,3 +18,15 @@ newMessage.innerText = "This is a new message added with javascript"
 
 //add the new h1 message to our page
 document.querySelector(".container").append(newMessage);
+
+
+//adding a new image to the page
+
+let newImage = document.createElement("img");
+newImage.classList.add("new-image");
+newImage.src = "./assets/dog.jpg";
+
+// add image to the page
+
+let container = document.querySelector(".container");
+container.append(newImage);
