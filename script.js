@@ -31,7 +31,7 @@ newImage.src = "./assets/dog.jpg";
 let container = document.querySelector(".container");
 container.append(newImage);
 
-//defined button
+//defined
 let button = document.querySelector(".click-me");
 
 button.addEventListener("click", function(){
