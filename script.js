@@ -31,7 +31,7 @@ newImage.src = "./assets/dog.jpg";
 let container = document.querySelector(".container");
 container.append(newImage);
 
-//defined
+//defined button
 let button = document.querySelector(".click-me");
 
 button.addEventListener("click", function(){
@@ -42,7 +42,19 @@ button.addEventListener("click", function(){
      newImage.src = "./assets/dog.jpg";
 
      //add image to the page
-
      container.append(newImage);
+})
 
+//defined button
+let button = document.querySelector(".click-me");
+
+button.addEventListener("click", function(){
+    // creating new image element
+
+    let dogImage = document.createElement("img");
+      dogImage.classList.add("dog-image");
+     newImage.src = "./assets/IMG_4322.jpg";
+
+     //add image to the page
+     container.append(newImage);
 })
