@@ -55,10 +55,24 @@ function showMovie() {
     console.log("showMovie()");
     movie.forEach((movie) => {
     
+
+        // add movie titles to page 
          var movieName = document.createElement("h1");
          movieName.innerText = movie.fields.movie_name;
          document.body.appendChild(movieName);
     
+         //add notes name to page
+         var movieNotes = document.createElement("p");
+         movieNotes.innerText = movie.fields.notes;
+         document.body.appendChild(movieNotes);
+
+
+         // adding artist image to page
+         var movieImage = document.createElement("img");
+         movieImage.src = movie.fields.movie_image[0].url;
+         document.body.appendChild(movieImage);
+
+
     });
   }
   
