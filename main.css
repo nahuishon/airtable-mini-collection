@@ -1,34 +1,4 @@
-@font-face {
-    font-family: "Fraunces";
-    src: url("./assets/Fraunces.woff2") format("woff2");
-}
 
 body {
-    font-family: "Fraunces", sans-serif;
-}
-
-.message.big {
-    font-size: 10rem;
-}
-
-.container {
-    background-color: lightblue;
-    min-height: 100vh;
-    padding: 2rem;
-}
-.new-message {
-    text-align: center;
-}
-
-.new-image {
-    transform:rotate(10deg);
-}
-
-.click-me {
-    font-size:2rem;
-    width: 200px;
-    padding: 1rem;
-    border: 1px solid black;
-    background: white;
-    text-align: center;
+    font-family: Arial;
 }
