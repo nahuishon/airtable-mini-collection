@@ -5,7 +5,6 @@ let myMessage = document.querySelector(".message");
 
 console.log(myMessage.innerText);
 
-//changing element properties
 
 myMessage.style.color = "#6c0";
 //myMessage.classList.add("big");
