@@ -54,7 +54,7 @@ body {
     cursor: pointer;
   }
   
-  .movie-container.active .movie-title {
+  .movie-container.active .movie-name {
     display: block;
   }
   

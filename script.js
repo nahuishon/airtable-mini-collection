@@ -46,14 +46,14 @@ function gotAllMovie(err) {
 function consoleLogMovie() {
     console.log("consoleLogMovie()");
     movie.forEach((movie) => {
-      console.log("movie:", movie);
+      console.log("Movie:", movie);
     });
   }
 
   // loop through airtable data, and display them onto our page
 function showMovie() {
     console.log("showMovie()");
-    movie.forEach(movie => {
+    movie.forEach((movie) => {
   
         //create container for each movie
 
