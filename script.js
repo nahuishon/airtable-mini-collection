@@ -15,7 +15,7 @@ var base = new Airtable({ apiKey: "keyAPSgVKXfGcLldO" }).base(
 base("movie").select({}).eachPage(gotPageOfMovie, gotAllMovie);
 
 // an empty array to hold our book data
-const movie = [];
+var movie = [];
 
 //callback function that receives our data
 function gotPageOfMovie(records, fetchNextPage) {
@@ -54,26 +54,9 @@ function consoleLogMovie() {
 function showMovie() {
     console.log("showMovie()");
     movie.forEach((movie) => {
-    
+  
+        //create container for each movie
 
-        // add movie titles to page 
-         //var movieName = document.createElement("h1");
-         //movieName.innerText = movie.fields.movie_name;
-         //document.body.appendChild(movieName);
-    
-         //add notes name to page
-         //var movieNotes = document.createElement("p");
-        // movieNotes.innerText = movie.fields.notes;
-         //document.body.appendChild(movieNotes);
-
-
-         // adding artist image to page
-       //  var movieImage = document.createElement("img");
-        // movieImage.src = movie.fields.movie_image[0].url;
-        // document.body.appendChild(movieImage);
-
-          //creating a new div container
-          //this is where our song info will go 
          var movieContainer = document.createElement("div");
          movieContainer.classList.add("movie-container");
         document.querySelector(".container").append(movieContainer);
@@ -85,10 +68,10 @@ function showMovie() {
            movieContainer.append(movieName);
 
            //add artists to our movie container
-           var movieArtist = document.createElement("h1");
-           movieArtist.classList.add("movie-artist");
-           movieArtist.innerText = movie.fields.artist;
-           movieContainer.append(movieArtist);
+           var nameOfArtist = document.createElement("h1");
+          nameOfArtist.classList.add("movie-artist");
+          nameOfArtist.innerText = movie.fields.artist;
+           movieContainer.append(nameOfArtist);
 
 
            //add description to our song container
@@ -116,7 +99,7 @@ function showMovie() {
           //a class to the song container
           var movieGenre = movie.fields.genre;
           movieGenre.forEach(function(genre){
-            movieContainer.classList.add(genre)
+            movieContainer.classList.add(genre);
 
           });
 
@@ -161,10 +144,8 @@ function showMovie() {
     var filterReset = document.querySelector(".js-reset");
     filterReset.addEventListener("click", function() {
       songContainer.style.background = "white";
-    });
-
-
+         });
       });
-    }
+}
   
   
