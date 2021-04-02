@@ -53,7 +53,7 @@ function consoleLogMovie() {
   // loop through airtable data, and display them onto our page
 function showMovie() {
     console.log("showMovie()");
-    movie.forEach((movie) => {
+    movie.forEach(movie => {
   
         //create container for each movie
 
@@ -110,9 +110,9 @@ function showMovie() {
           //change background
 
           var filterDrama = document.querySelector('.drama');
-          filterDrama.addEventListener("click", function(){
+          filterDrama.addEventListener("click", function() {
       
-            if (movieContainer.classList.contains("drama")){
+            if (movieContainer.classList.contains("drama")) {
               movieContainer.style.background = "red";
             } else {
               movieContainer.style.background = "white";
@@ -145,7 +145,7 @@ function showMovie() {
     filterReset.addEventListener("click", function() {
       songContainer.style.background = "white";
          });
-      });
-}
+        });
+      }
   
   
