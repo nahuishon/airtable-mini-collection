@@ -57,23 +57,114 @@ function showMovie() {
     
 
         // add movie titles to page 
-         var movieName = document.createElement("h1");
-         movieName.innerText = movie.fields.movie_name;
-         document.body.appendChild(movieName);
+         //var movieName = document.createElement("h1");
+         //movieName.innerText = movie.fields.movie_name;
+         //document.body.appendChild(movieName);
     
          //add notes name to page
-         var movieNotes = document.createElement("p");
-         movieNotes.innerText = movie.fields.notes;
-         document.body.appendChild(movieNotes);
+         //var movieNotes = document.createElement("p");
+        // movieNotes.innerText = movie.fields.notes;
+         //document.body.appendChild(movieNotes);
 
 
          // adding artist image to page
-         var movieImage = document.createElement("img");
-         movieImage.src = movie.fields.movie_image[0].url;
-         document.body.appendChild(movieImage);
+       //  var movieImage = document.createElement("img");
+        // movieImage.src = movie.fields.movie_image[0].url;
+        // document.body.appendChild(movieImage);
+
+          //creating a new div container
+          //this is where our song info will go 
+         var movieContainer = document.createElement("div");
+         movieContainer.classList.add("movie-container");
+        document.querySelector(".container").append(movieContainer);
+       
+          //add song thitles to our song container
+          var movieName = document.createElement("h1");
+           movieName.classList.add("movie-name");
+           movieName.innerText = movie.fields.movie_name;
+           movieContainer.append(movieName);
+
+           //add artists to our movie container
+           var movieArtist = document.createElement("h1");
+           movieArtist.classList.add("movie-artist");
+           movieArtist.innerText = movie.fields.artist;
+           movieContainer.append(movieArtist);
 
 
+           //add description to our song container
+           var movieDescription = document.createElement("p");
+          movieDescription.classList.add("movie-description");
+          movieDescription.innerText = movie.fields.description;
+          movieContainer.append(movieDescription);
+   
+          //add image to our song container
+          var movieImage = document.createElement("img");
+          movieImage.classList.add("movie-image");
+          movieImage.src = movie.fields.movie_image[0].url;
+          movieContainer.append(movieImage);
+
+    
+         //add evnet listener
+         //when user clicks on moie container
+         //image and description will appear or disappear
+         movieContainer.addEventListener("click", function(event){
+          movieDescription.classList.toggle("active");
+          movieImage.classList.toggle("active");
+       });
+
+          //loop throught the array and addeach genre as 
+          //a class to the song container
+          var movieGenre = movie.fields.genre;
+          movieGenre.forEach(function(genre){
+            movieContainer.classList.add(genre)
+
+          });
+
+          //add event listener to our fillter 
+          //to add an active class to our song
+
+          //clicking on filter by movie
+          //change background
+
+          var filterDrama = document.querySelector('.drama');
+          filterDrama.addEventListener("click", function(){
+      
+            if (movieContainer.classList.contains("drama")){
+              movieContainer.style.background = "red";
+            } else {
+              movieContainer.style.background = "white";
+              }
+            });
+        
+            //filter by crime genre
+            var fillterCrime = document.querySelector('.crime');
+            filterCrime.addEventListener("click",function(){
+
+              if (movieContainer.classList.contains("crime")) {
+                movieContainer.style.background = "red";
+              }else {
+                movieContainer.style.background = "white";
+              }
+            });
+        
+            // filter by shoegaze music
+    var filterAction = document.querySelector(".action");
+    filterAction.addEventListener("click", function() {
+      if (movieContainer.classList.contains("action")) {
+        movieContainer.style.background = "red";
+      } else {
+        movieContainer.style.background = "white";
+      }
     });
-  }
+
+    // filter reset
+    var filterReset = document.querySelector(".js-reset");
+    filterReset.addEventListener("click", function() {
+      songContainer.style.background = "white";
+    });
+
+
+      });
+    }
   
   
