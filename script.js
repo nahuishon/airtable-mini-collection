@@ -126,9 +126,9 @@ function showMovie() {
              filterCrime.addEventListener("click",function(){
 
               if (movieContainer.classList.contains("crime")) {
-                movieContainer.style.background = "red";
-              }else {
                 movieContainer.style.background = "black";
+              }else {
+                movieContainer.style.background = "red";
               }
             });
         
