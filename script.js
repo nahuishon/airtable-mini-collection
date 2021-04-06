@@ -92,7 +92,7 @@ function showMovie() {
          //add evnet listener
          //when user clicks on moie container
          //image and description will appear or disappear
-         movieContainer.addEventListener("click", function(event){
+         movieContainer.addEventListener("click", function(){
           movieDescription.classList.toggle("active");
           movieImage.classList.toggle("active");
        });
@@ -103,7 +103,7 @@ function showMovie() {
           movieGenre.forEach(function(genre){
             movieContainer.classList.add(genre)
 
-          })
+          });
 
           //add event listener to our fillter 
           //to add an active class to our song
@@ -111,7 +111,7 @@ function showMovie() {
           //clicking on filter by movie
           //change background
 
-          var filterDrama = document.querySelector('.drama');
+          var filterDrama = document.querySelector('.js-drama');
           filterDrama.addEventListener("click", function() {
       
             if (movieContainer.classList.contains("drama")) {
@@ -122,30 +122,31 @@ function showMovie() {
             });
         
             //filter by crime genre
-            var filterCrime = document.querySelector('.crime');
+            var filterCrime = document.querySelector('.js-crime');
              filterCrime.addEventListener("click",function(){
 
               if (movieContainer.classList.contains("crime")) {
                 movieContainer.style.background = "red";
               }else {
-                movieContainer.style.background = "white";
+                movieContainer.style.background = "black";
               }
             });
         
             // filter by shoegaze music
-    var filterAction = document.querySelector(".action");
+    var filterAction = document.querySelector(".js-action");
     filterAction.addEventListener("click", function() {
       if (movieContainer.classList.contains("action")) {
         movieContainer.style.background = "red";
       } else {
-        movieContainer.style.background = "white";
+        movieContainer.style.background = "mint";
       }
     });
 
     // filter reset
-    var filterReset = document.querySelector(".js-reset");
-    filterReset.addEventListener("click", function() {
-      movieContainer.style.background = "white";
+    var filterComedy = document.querySelector(".js-comedy");
+    filterComedy.addEventListener("click", function() {
+      movieContainer.style.background = "black";
+    
          });
         });
       }
