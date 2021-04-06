@@ -114,8 +114,8 @@ function showMovie() {
           var filterDrama = document.querySelector('.js-drama');
           filterDrama.addEventListener("click", function() {
       
-            if (movieContainer.classList.contains("drama")) {
-              movieContainer.style.background = "red";
+            if (movieContainer.classList.contains("Drama")) {
+              movieContainer.style.background = "blue";
             } else {
               movieContainer.style.background = "black";
               }
@@ -125,7 +125,7 @@ function showMovie() {
             var filterCrime = document.querySelector('.js-crime');
              filterCrime.addEventListener("click",function(){
 
-              if (movieContainer.classList.contains("crime")) {
+              if (movieContainer.classList.contains("Crime")) {
                 movieContainer.style.background = "black";
               }else {
                 movieContainer.style.background = "red";
@@ -135,7 +135,7 @@ function showMovie() {
             // filter by shoegaze music
     var filterAction = document.querySelector(".js-action");
     filterAction.addEventListener("click", function() {
-      if (movieContainer.classList.contains("action")) {
+      if (movieContainer.classList.contains("Action")) {
         movieContainer.style.background = "red";
       } else {
         movieContainer.style.background = "mint";
@@ -145,8 +145,11 @@ function showMovie() {
     // filter reset
     var filterComedy = document.querySelector(".js-comedy");
     filterComedy.addEventListener("click", function() {
+      if (movieContainer.classList.contains("Comedy")) {
+      movieContainer.style.background = "white";
+    } else {
       movieContainer.style.background = "black";
-    
+    }
          });
         });
       }
