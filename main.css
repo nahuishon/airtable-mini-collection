@@ -1,21 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap');
 body {
   font-family: 'Kiwi Maru', serif;
-    background-color: rgb(184, 144, 144);
+    background-color: rgb(27, 27, 27);
     color: aliceblue;
   }
   
   h1 {
     font-weight: normal;
-    font-size: 1.5rem;
-    color: rgb(217, 232, 245);
-    margin-left: 300px;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    margin-left: 130px;
+    margin-bottom: 10px;
+    margin-top: 60px;
   }
 
   .container {
     padding: 10rem;
-    background-color: rgb(138, 130, 130);
+    background-color: rgb(32, 32, 32);
     color: rgb(255, 255, 255);
   }
   
@@ -56,8 +57,8 @@ body {
     grid-gap: 20px;
   }
   .movie-container:hover {
-    border: 3px solid rgb(231, 148, 148);
-    border-radius: 25px;
+    border: 3px solid rgb(40, 224, 215);
+    border-radius: 35px;
     cursor: pointer;
   }
   
@@ -68,7 +69,7 @@ body {
   .filter {
     padding: 3rem;
     cursor: pointer;
-    color: black;
+    color: rgb(255, 255, 255);
   }
   
   
