@@ -122,8 +122,8 @@ function showMovie() {
             });
         
             //filter by crime genre
-            var fillterCrime = document.querySelector('.crime');
-            filterCrime.addEventListener("click",function(){
+            var filterCrime = document.querySelector('.crime');
+             filterCrime.addEventListener("click",function(){
 
               if (movieContainer.classList.contains("crime")) {
                 movieContainer.style.background = "red";
@@ -145,7 +145,7 @@ function showMovie() {
     // filter reset
     var filterReset = document.querySelector(".js-reset");
     filterReset.addEventListener("click", function() {
-      songContainer.style.background = "white";
+      movieContainer.style.background = "white";
          });
         });
       }
