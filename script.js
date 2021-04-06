@@ -12,7 +12,9 @@ var base = new Airtable({ apiKey: "keyAPSgVKXfGcLldO" }).base(
 
 
  //get our airtable data, specify how to retrieve it
-base("movie").select({}).eachPage(gotPageOfMovie, gotAllMovie);
+base("movie")
+.select({})
+.eachPage(gotPageOfMovie, gotAllMovie);
 
 // an empty array to hold our book data
 var movie = [];
