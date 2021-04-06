@@ -101,9 +101,9 @@ function showMovie() {
           //a class to the song container
           var movieGenre = movie.fields.genre;
           movieGenre.forEach(function(genre){
-            movieContainer.classList.add(genre);
+            movieContainer.classList.add(genre)
 
-          });
+          })
 
           //add event listener to our fillter 
           //to add an active class to our song
@@ -117,7 +117,7 @@ function showMovie() {
             if (movieContainer.classList.contains("drama")) {
               movieContainer.style.background = "red";
             } else {
-              movieContainer.style.background = "white";
+              movieContainer.style.background = "black";
               }
             });
         
